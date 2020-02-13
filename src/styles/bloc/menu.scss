@@ -1,0 +1,129 @@
+a {
+  text-decoration: none;
+  color: $beige;
+}
+
+#sideNavBar {
+  position: fixed;
+  left: -100px;
+  background-color: $grey;
+  color: $grey;
+  height: 100vh;
+  width: 100px;
+  transition: all 500ms linear;
+}
+
+#sideNavBar.active {
+  left: 0;
+}
+
+ul {
+  display: flex;
+  flex-direction: row-reverse; /* Pour que le dernier dans le HTML soit le premier en haut */
+  justify-content: space-around;
+  padding: 15px;
+  width: 100vh; /* Comme on le retourne après, on utilise des vh pour la largeur */
+  transform: rotate(-90deg) translate(calc(-100vh + 23px), 50%); /* Le 23px doit être ajusté à la main, c'est la moitié de la hauteur du menu (avant qu'il soit retourné) */
+  transform-origin: 0;
+  color: $beige;
+  font-family: "Baloo";
+  font-size: 1em;
+  margin-left: 25%;
+}
+//##### animation icon croix-hamburger #####//
+.menu {
+  width: 3em;
+  height: 3em;
+  position: fixed;
+  z-index: 0;
+  left: 112px;
+  top: 20px;
+}
+.menu .bit-1::before {
+  content: "";
+  left: 0.5em;
+  top: 0.5em;
+  position: absolute;
+  width: 1em;
+  transform-origin: left bottom;
+  height: 0.3em;
+  background: #2e313c;
+  transition: transform 0.3s, top 0.3s;
+}
+.menu .bit-1::after {
+  content: "";
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  width: 1em;
+  transform-origin: right bottom;
+  height: 0.3em;
+  background: #2e313c;
+  transition: transform 0.3s, top 0.3s;
+}
+.menu .bit-2 {
+  position: absolute;
+  width: 2em;
+  top: 50%;
+  left: 50%;
+  height: 0.3em;
+  background: #2e313c;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s 0.3s, width 0.3s 0.6s;
+}
+.menu .bit-3::before {
+  content: "";
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  width: 1em;
+  transform-origin: left top;
+  height: 0.3em;
+  background: #2e313c;
+  transition: transform 0.3s, bottom 0.3s;
+}
+.menu .bit-3::after {
+  content: "";
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  width: 1em;
+  transform-origin: right top;
+  height: 0.3em;
+  background: #2e313c;
+  transition: transform 0.3s, bottom 0.3s;
+}
+.menu.open .bit-1:before {
+  top: 0.4em;
+  width: 1.2em;
+  transform: rotate(45deg);
+  transform-origin: left bottom;
+  transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
+}
+.menu.open .bit-1:after {
+  top: 0.4em;
+  width: 1.2em;
+  transform: rotate(-45deg);
+  transform-origin: right bottom;
+  transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
+}
+.menu.open .bit-2 {
+  width: 0.3em;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: transform 0.3s 0.3s, width 0.3s;
+}
+.menu.open .bit-3:before {
+  bottom: 0.4em;
+  width: 1.2em;
+  transform: rotate(-45deg);
+  transform-origin: left top;
+  transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
+}
+.menu.open .bit-3:after {
+  bottom: 0.4em;
+  width: 1.2em;
+  transform: rotate(45deg);
+  transform-origin: right top;
+  transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
+}
+//##### animation icon croix-hamburger  #####//

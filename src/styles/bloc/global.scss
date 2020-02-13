@@ -1,0 +1,87 @@
+body {
+  background-color: $beige;
+  padding-left: 119px;
+  padding-right: 119px;
+}
+
+a {
+  text-decoration: none;
+  color: $beige;
+}
+
+#sideNavBar {
+  position: fixed;
+  left: -100px;
+  background-color: $grey;
+  color: $grey;
+  height: 100vh;
+  width: 100px;
+  transition: all 500ms linear;
+}
+
+#sideNavBar.active {
+  left: 0;
+}
+
+ul {
+  display: flex;
+
+  flex-direction: row-reverse; /* Pour que le dernier dans le HTML soit le premier en haut */
+  justify-content: space-around;
+  padding: 15px;
+  width: 100vh; /* Comme on le retourne après, on utilise des vh pour la largeur */
+  transform: rotate(-90deg) translate(calc(-100vh + 23px), 50%); /* Le 23px doit être ajusté à la main, c'est la moitié de la hauteur du menu (avant qu'il soit retourné) */
+  transform-origin: 0;
+  color: $beige;
+  font-family: "Baloo";
+  font-size: 1em;
+  margin-left: 25%;
+}
+
+//##### bg-color grey //#####
+.topDiv {
+  background-color: $grey;
+  width: 850px;
+  height: 350px;
+  position: fixed;
+  top: 13%;
+  left: 250px;
+  animation: entranceLeft 2.5s ease-in-out both;
+  animation-delay: 1s;
+}
+.bottomDiv {
+  background-color: $grey;
+  width: 850px;
+  height: 350px;
+  position: fixed;
+  top: 23%;
+  right: 250px;
+  animation: entranceRight 2.5s ease-in-out both;
+  animation-delay: 1s;
+}
+.name.a {
+  color: $orange;
+}
+.name.c,
+.name.cerin {
+  font-size: 6em;
+}
+.name.mille {
+  margin-right: 10px;
+}
+
+.intro {
+  position: relative;
+  top: 25%;
+  left: 390px;
+  color: $beige;
+}
+.name {
+  display: inline-block;
+  margin-top: 19%;
+  font-size: 4.6em;
+  font-family: "Questrial", sans-serif;
+  letter-spacing: 15px;
+  z-index: 5;
+}
+//##### bg-color grey //#####

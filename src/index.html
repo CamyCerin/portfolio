@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="/styles/styles.scss" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="sideNavBar">
+    <div class="menu" onclick="toggleNav()">
+      <div class="bit-1"></div>
+      <div class="bit-2"></div>
+      <div class="bit-3"></div>
+    </div>
+    <ul>
+      <li><a href="#">me contacter</a></li>
+      <li><a href="#">mes projets</a></li>
+      <li><a href="#">compétences</a></li>
+      <li><a href="/screens/parkour.html">mon parcours</a></li>
+      <li><a href="#">à propos</a></li>
+    </ul>
+  </div>
+
+  <div class="topDiv"></div>cc
+  <div class="bottomDiv"></div>
+  <div class="intro">
+    <p class="name c">C</p>
+    <p class="name a">a</p>
+    <p class="name mille">mille </p>
+    <p class="name cerin"> CÉRIN</p>
+  </div>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<script>
+  // animation du menu v
+
+  function toggleNav() {
+    document.getElementById("sideNavBar").classList.toggle("active");
+  }
+  var menu = document.querySelector(".menu");
+  // animation du menu ^
+
+  // animation de l'icone du menu v
+  function toggleMenu() {
+    menu.classList.toggle("open");
+  }
+  menu.addEventListener("click", toggleMenu);
+  // animation de l'icone du menu ^
+
+
+  console.log('couc');
+</script>
