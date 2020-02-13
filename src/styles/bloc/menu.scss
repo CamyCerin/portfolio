@@ -1,6 +1,9 @@
 a {
   text-decoration: none;
   color: $beige;
+  padding: 25px;
+  padding-left: 10px;
+  // background-color: yellow;
 }
 
 #sideNavBar {
@@ -21,7 +24,7 @@ ul {
   display: flex;
   flex-direction: row-reverse; /* Pour que le dernier dans le HTML soit le premier en haut */
   justify-content: space-around;
-  padding: 15px;
+  // padding-top: 15px;
   width: 100vh; /* Comme on le retourne après, on utilise des vh pour la largeur */
   transform: rotate(-90deg) translate(calc(-100vh + 23px), 50%); /* Le 23px doit être ajusté à la main, c'est la moitié de la hauteur du menu (avant qu'il soit retourné) */
   transform-origin: 0;
