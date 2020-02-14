@@ -10,8 +10,8 @@
     "sass": "^1.24.4"
   },
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "dev": "cp -R src/asset dist && parcel src/index.html",
+    "build": "cp -R src/asset dist && parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/CamilleCERIN/portfolio/issues"
   },
-  "homepage": "https://github.com/CamilleCERIN/portfolio#readme"
+  "homepage": "https://github.com/CamilleCERIN/portfolio#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.25.0"
+  },
+  "dependencies": {
+    "asset": "^0.4.13"
+  }
 }
