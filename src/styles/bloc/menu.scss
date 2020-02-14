@@ -29,7 +29,7 @@ ul {
   transform: rotate(-90deg) translate(calc(-100vh + 23px), 50%); /* Le 23px doit être ajusté à la main, c'est la moitié de la hauteur du menu (avant qu'il soit retourné) */
   transform-origin: 0;
   color: $beige;
-  font-family: "Baloo";
+  font-family: "Montserrat Alternates", sans-serif;
   font-size: 1em;
   margin-left: 25%;
 }

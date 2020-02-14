@@ -2,6 +2,7 @@ body {
   background-color: $beige;
   padding-left: 119px;
   padding-right: 119px;
+  overflow: hidden;
 }
 
 a {
@@ -17,10 +18,10 @@ a {
   height: 100vh;
   width: 100px;
   transition: all 500ms linear;
-}
-
-#sideNavBar.active {
-  left: 0;
+  z-index: 1;
+  .active {
+    left: 0;
+  }
 }
 
 ul {
@@ -40,7 +41,7 @@ ul {
 
 //##### bg-color grey //#####
 .topDiv {
-  background-color: $grey;
+  background-color: $beige;
   width: 850px;
   height: 350px;
   position: fixed;
